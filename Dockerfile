@@ -17,7 +17,7 @@ git clone --depth 1 https://github.com/gogs/gogs.git /home/gogs/gogs-app-src
 
 WORKDIR /home/gogs/gogs-app-src/
 
-RUN /
+RUN 
 mkdir /home/gogs/gogs-app && /
 usr/local/go/bin/go build -o /home/gogs/gogs-app/gogs && \
 rm -rf /home/gogs/gogs-app && /
