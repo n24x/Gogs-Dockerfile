@@ -12,10 +12,15 @@ rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/* && \
 useradd -s /bin/bash -m gogs && \
 wget https://golang.org/dl/go1.16.3.linux-amd64.tar.gz && \
 tar -C /usr/local -xzf go1.16.3.linux-amd64.tar.gz && \
-git clone --depth 1 https://github.com/gogs/gogs.git /home/gogs/gogs-app 
+rm -f go1.16.3.linux-amd64.tar.gz && \
+git clone --depth 1 https://github.com/gogs/gogs.git /home/gogs/gogs-app-src 
 
-WORKDIR /home/gogs/gogs-app/
-RUN /usr/local/go/bin/go build -o /home/gogs/gogs-app/gogs && \
+WORKDIR /home/gogs/gogs-app-src/
+
+RUN /
+mkdir /home/gogs/gogs-app && /
+usr/local/go/bin/go build -o /home/gogs/gogs-app/gogs && \
+rm -f /home/gogs/gogs-app && /
 chown -R gogs:gogs /home/gogs
 
 EXPOSE 3000 22
