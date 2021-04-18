@@ -6,7 +6,7 @@ MAINTAINER n24x
 
 RUN \ 
 apt update && \
-apt-get -y install openssh-server git wget && \
+apt-get -y install openssh-server git wget gcc && \
 apt clean && \
 rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/* && \
 useradd -s /bin/bash -m gogs && \
