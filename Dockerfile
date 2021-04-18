@@ -20,7 +20,7 @@ WORKDIR /home/gogs/gogs-app-src/
 RUN /
 mkdir /home/gogs/gogs-app && /
 usr/local/go/bin/go build -o /home/gogs/gogs-app/gogs && \
-rm -f /home/gogs/gogs-app && /
+rm -rf /home/gogs/gogs-app && /
 chown -R gogs:gogs /home/gogs
 
 EXPOSE 3000 22
