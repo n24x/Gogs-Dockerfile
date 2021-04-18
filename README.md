@@ -1,3 +1,3 @@
 # This is my Dockerfile for gogs
 
-this new repo
+Adding to github
